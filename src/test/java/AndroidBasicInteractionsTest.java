@@ -23,7 +23,7 @@ public class AndroidBasicInteractionsTest extends BaseTest {
     @BeforeClass
     public void setUp() throws IOException {
         File classpathRoot = new File(System.getProperty("user.dir"));
-        File appDir = new File(classpathRoot, "../apps");
+        File appDir = new File(classpathRoot, "/apps");
         File app = new File(appDir.getCanonicalPath(), "ApiDemos-debug.apk");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         /*
