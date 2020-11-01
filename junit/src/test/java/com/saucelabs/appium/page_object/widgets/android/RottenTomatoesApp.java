@@ -7,6 +7,7 @@ import com.saucelabs.appium.page_object.widgets.android.extended.ExtendedAndroid
 import com.saucelabs.appium.page_object.widgets.android.extended.ExtendedAndroidReview;
 import com.saucelabs.appium.page_object.widgets.android.simple.AndroidMovies;
 import com.saucelabs.appium.page_object.widgets.android.simple.AndroidReview;
+import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AndroidFindBys;
 import org.apache.commons.lang3.StringUtils;
@@ -22,8 +23,8 @@ public class RottenTomatoesApp {
     @AndroidFindBy(id = "com.codepath.example.rottentomatoes:id/lvMovies")
     private AndroidMovies simpleMovies;
 
-    @AndroidFindBys({@AndroidFindBy(id = "android:id/content"),
-            @AndroidFindBy(className = "android.widget.RelativeLayout")})
+    @AndroidFindBys({@AndroidBy(id = "android:id/content"),
+            @AndroidBy(className = "android.widget.RelativeLayout")})
     private AndroidReview simpleReview;
 
     private AnnotatedAndroidMovies annotatedAndroidMovies;

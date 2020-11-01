@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 
 
 public class BaseCrossPlatformDriver {
@@ -82,7 +83,7 @@ public class BaseCrossPlatformDriver {
         Dimension size = slider.getSize();
 
         TouchAction swipe = new TouchAction(driver).press(slider, size.width / 2, size.height - 20)
-                .waitAction(2000).moveTo(slider,size.width / 2, size.height / 2 + 50).release();
+                .waitAction(Duration.ofMillis(2000)).moveTo(slider,size.width / 2, size.height / 2 + 50).release();
         swipe.perform();
     }
 }

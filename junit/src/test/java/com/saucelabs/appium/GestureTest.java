@@ -10,6 +10,8 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 import static org.junit.Assert.assertTrue;
 
 public class GestureTest extends BaseCrossPlatformDriver{
@@ -21,7 +23,7 @@ public class GestureTest extends BaseCrossPlatformDriver{
         MobileElement slider = driver.findElementByAccessibilityId("slider");
         Dimension size = slider.getSize();
 
-        TouchAction swipe = new TouchAction(driver).press(slider, 0, size.height / 2).waitAction(2000)
+        TouchAction swipe = new TouchAction(driver).press(slider, 0, size.height / 2).waitAction(Duration.ofMillis(2000))
                 .moveTo(slider, size.width / 2, size.height / 2).release();
         swipe.perform();
     }
@@ -44,7 +46,7 @@ public class GestureTest extends BaseCrossPlatformDriver{
         driver.findElementByAccessibilityId("longPress").click();
         MobileElement longpress = (MobileElement) new WebDriverWait(driver, 30).
                 until(ExpectedConditions.elementToBeClickable(MobileBy.AccessibilityId("longpress")));
-        new TouchAction(driver).longPress(longpress,3000).perform();
+        new TouchAction(driver).longPress(longpress, Duration.ofMillis(3000)).perform();
         assertTrue(driver.switchTo().alert().getText().contains("Long Pressed"));
     }
 }

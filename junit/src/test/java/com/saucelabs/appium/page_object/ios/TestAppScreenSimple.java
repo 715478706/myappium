@@ -2,8 +2,7 @@ package com.saucelabs.appium.page_object.ios;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSElement;
-import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.iOSFindBy;
+import io.appium.java_client.pagefactory.*;
 
 import java.util.List;
 
@@ -15,8 +14,7 @@ import com.saucelabs.appium.page_object.android.ApiDemosListViewScreenByAllPossi
 import com.saucelabs.appium.page_object.android.ApiDemosListViewScreenChaided;
 import com.saucelabs.appium.page_object.android.ApiDemosListViewScreenSimple;
 
-import io.appium.java_client.pagefactory.AndroidFindBys;
-import io.appium.java_client.pagefactory.iOSFindAll;;
+;
 
 /**
  * Here is the common sample shows how to use
@@ -63,8 +61,8 @@ public class TestAppScreenSimple {
 	public List<RemoteWebElement> remoteElementViews;
 
 	@AndroidFindBys({
-		@AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"android:id/list\")"),
-		@AndroidFindBy(className = "android.widget.TextView")
+		@AndroidBy(uiAutomator = "new UiSelector().resourceId(\"android:id/list\")"),
+		@AndroidBy(className = "android.widget.TextView")
 		})
 	public List<WebElement> chainElementViews;
 
@@ -95,8 +93,8 @@ public class TestAppScreenSimple {
 	public RemoteWebElement remotetextVieW;
 
 	@AndroidFindBys({
-		@AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"android:id/list\")"),
-		@AndroidFindBy(className = "android.widget.TextView")
+		@AndroidBy(uiAutomator = "new UiSelector().resourceId(\"android:id/list\")"),
+		@AndroidBy(className = "android.widget.TextView")
 		})
 	public WebElement chainElementView;
 	
@@ -107,14 +105,14 @@ public class TestAppScreenSimple {
 	public List<IOSElement> iosButtons;
 	
 	@iOSFindAll({
-		@iOSFindBy(xpath = "ComputeSumButton_Test"),	
-		@iOSFindBy(accessibility = "ComputeSumButton")	//it is real locator
+		@iOSBy(xpath = "ComputeSumButton_Test"),
+		@iOSBy(accessibility = "ComputeSumButton")	//it is real locator
 	})
 	public WebElement findAllElement;
 	
 	@iOSFindAll({
-		@iOSFindBy(xpath = "ComputeSumButton_Test"),	
-		@iOSFindBy(accessibility = "ComputeSumButton")	//it is real locator
+		@iOSBy(xpath = "ComputeSumButton_Test"),
+		@iOSBy(accessibility = "ComputeSumButton")	//it is real locator
 	})
 	public List<WebElement> findAllElements;
 

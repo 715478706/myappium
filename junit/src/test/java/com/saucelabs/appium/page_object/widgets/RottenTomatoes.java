@@ -26,6 +26,7 @@ import com.saucelabs.appium.page_object.widgets.selendroid.extended.ExtendedSele
 import com.saucelabs.appium.page_object.widgets.selendroid.simple.SelendroidMovies;
 import com.saucelabs.appium.page_object.widgets.selendroid.simple.SelendroidReview;
 import io.appium.java_client.pagefactory.*;
+import javafx.util.Duration;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.support.FindBy;
 
@@ -42,8 +43,8 @@ public class RottenTomatoes {
     private Movies simpleMovies;
 
 
-    @AndroidFindBys({@AndroidFindBy(id = "android:id/content"),
-            @AndroidFindBy(className = "android.widget.RelativeLayout")})
+    @AndroidFindBys({@AndroidBy(id = "android:id/content"),
+            @AndroidBy(className = "android.widget.RelativeLayout")})
     @FindBy(id = "main_container")
     @SelendroidFindBy(className = "android.widget.RelativeLayout")
     @iOSFindBy(className = "UIAWindow")

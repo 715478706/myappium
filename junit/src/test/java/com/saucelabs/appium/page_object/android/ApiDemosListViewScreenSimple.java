@@ -2,7 +2,6 @@ package com.saucelabs.appium.page_object.android;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.iOSFindBy;
 
 import java.util.List;
 

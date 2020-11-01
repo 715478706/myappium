@@ -1,5 +1,6 @@
 package com.saucelabs.appium.page_object.widgets;
 
+import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.TimeOutDuration;
@@ -42,7 +43,7 @@ public class AndroidOverrideWidgetTest implements WidgetTest{
     @Before
     public void setUp() throws Exception {
         if (driver != null)
-            driver.startActivity("com.codepath.example.rottentomatoes", "BoxOfficeActivity");
+            driver.startActivity(new Activity("com.codepath.example.rottentomatoes", "BoxOfficeActivity"));
     }
 
     @AfterClass

@@ -37,6 +37,6 @@ public class AndroidMovie extends Movie {
 
     @Override
     public void goToReview() {
-        ((AndroidElement) getWrappedElement()).tap(1, 1500);
+        ((AndroidElement) getWrappedElement()).click();
     }
 }

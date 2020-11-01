@@ -4,7 +4,6 @@ import com.saucelabs.appium.page_object.PageObjectWithCustomizedTimeOuts;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import io.appium.java_client.pagefactory.TimeOutDuration;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.junit.After;
 import org.junit.Before;

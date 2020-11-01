@@ -7,6 +7,7 @@ import com.saucelabs.appium.page_object.widgets.combined.extended.ExtendedCombin
 import com.saucelabs.appium.page_object.widgets.combined.extended.ExtendedCombinedReview;
 import com.saucelabs.appium.page_object.widgets.combined.simple.CombinedMovies;
 import com.saucelabs.appium.page_object.widgets.combined.simple.CombinedReview;
+import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AndroidFindBys;
 import io.appium.java_client.pagefactory.SelendroidFindBy;
@@ -26,8 +27,8 @@ public class RottenTomatoesAppWithCombinedWidgets {
     @FindBy(id = "movies-collection")
     private CombinedMovies simpleMovies;
 
-    @AndroidFindBys({@AndroidFindBy(id = "android:id/content"),
-            @AndroidFindBy(className = "android.widget.RelativeLayout")})
+    @AndroidFindBys({@AndroidBy(id = "android:id/content"),
+            @AndroidBy(className = "android.widget.RelativeLayout")})
     @FindBy(id = "main_container")
     @SelendroidFindBy(className = "android.widget.RelativeLayout")
     private CombinedReview simpleReview;

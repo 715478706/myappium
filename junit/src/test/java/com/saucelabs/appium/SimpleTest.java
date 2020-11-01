@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 
 import java.io.File;
@@ -58,7 +59,7 @@ public class SimpleTest {
         capabilities.setCapability("platformVersion", "9.3");
         capabilities.setCapability("deviceName", "iPhone 6");
         capabilities.setCapability("app", app.getAbsolutePath());
-        driver = new IOSDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         values = new ArrayList<Integer>();
     }
 
@@ -192,7 +193,7 @@ public class SimpleTest {
         WebElement slider = driver.findElement(By.xpath("//UIASlider[1]"));
         assertEquals("50%", slider.getAttribute("value"));
         Point sliderLocation = getCenter(slider);
-        driver.swipe(sliderLocation.getX(), sliderLocation.getY(), sliderLocation.getX()-100, sliderLocation.getY(), 1000);
+//        driver.swipe(sliderLocation.getX(), sliderLocation.getY(), sliderLocation.getX()-100, sliderLocation.getY(), 1000);
 
         assertEquals("0%", slider.getAttribute("value"));
     }

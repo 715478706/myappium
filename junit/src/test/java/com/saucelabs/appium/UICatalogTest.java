@@ -155,7 +155,7 @@ public class UICatalogTest {
         Point location1 = row.getLocation();
         Point center = getCenter(row);
         //perform swipe gesture
-        driver.swipe(center.getX(), center.getY(), center.getX(), center.getY()-20, 1);
+//        driver.swipe(center.getX(), center.getY(), center.getX(), center.getY()-20, 1);
         //get new row coordinates
         Point location2 = row.getLocation();
         assertEquals(location1.getX(), location2.getX());
